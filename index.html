@@ -7,7 +7,7 @@
     <title>About - Spikes</title>
     <link rel="stylesheet" href="/module-3-1-eindopdracht-RidouanRashid/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="javascript/functions.js"></script>
+    <script src="/module-3-1-eindopdracht-RidouanRashid/assets/js/functions.js"></script>
     <script>
         function showTab(tabId) {
             var tabs = document.querySelectorAll('.tab-content');
@@ -23,7 +23,7 @@
     <header>
         <div class="search-bar">
             <div class="logo">
-                <img src="pics/logo.png" alt="logo">
+                <img src="/pics/logo.png" alt="logo">
             </div>
             <input type="text" placeholder="Search">
         </div>
@@ -35,6 +35,7 @@
                 <li><a href="#" onclick="showTab('distanceSpikes')">Distance Spikes</a></li>
                 <li><a href="#" onclick="showTab('SprintSpikes')">Sprint Spikes</a></li>
                 <li><a href="#" onclick="showTab('allRoundSpikes')">Allround Spikes</a></li>
+                <li><a href="#" onclick="showTab('bestelformulier')">bestelformulier</a></li>
             </ul>
         </nav>
         
@@ -43,42 +44,54 @@
         <aside id="side-bar">
             <div id="slider">
                 <section id="section1">
-                    <h2>Section 1</h2> <br>
-                    <p>Content for section 1</p>
+                    
+                    <label for="price">Select Price:</label>
+                    <input type="range" id="price" name="price" min="100" max="500" step="10" value="100">
+                    <p>Price: $<span id="priceValue">100</span></p>
                 </section>
-            </div>
-            <section>
-                <div id="section2">
-                    alalalal222
-                </div>
-            </section>
-            <section>
-                <div id="section3">
-                    alalalal333
-                </div>
-            </section>
-            <section>
-                <div id="section4">
-                    alalalal444
-                </div>
-            </section>
-            <section>
-                <div id="section5">
-                    alalalal555
-                </div>
-            </section>
-            <section>
-                <div id="section6">
-                    alalalal666
-                </div>
-            </section>
+                
+                <section id="section2">
+                    
+                    <label for="size">Select Size:</label>
+                    <input type="range" id="size" name="size" min="1" max="10" step="1" value="1">
+                    <p>Size: <span id="sizeValue">1</span></p>
+                </section>
+                
+                <section id="section3">
+                    <h3>Color</h3>
+                    <label for="color">Choose Color:</label>
+                    <input type="color" id="color" name="color" value="#ff0000">
+                    <p>Color: <span id="colorValue"></span></p>
+                </section>
+                
+                <section id="section4">
+                    <h3>Shoe Laces</h3>
+                    <label for="laces">Select Laces:</label>
+                    <select id="laces" name="laces">
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                    <p>Laces: <span id="lacesValue">Black</span></p>
+                </section>
+                
+                <section id="section5">
+                    <h3>Stock</h3> 
+                    
+                    
+                    <p>Stock left: <span id="stockLeft">50</span> pairs</p>
+                </section>
+                
+                
+            </div>                
         </aside>
         <div class="content">
             <section id="Home" class="tab-content">
                 <h2>Home</h2>
                 <div class="model-img">
-                    <img src="pics/model1.png" alt="model" class="animate__animated animate__backInDown">
-                    <img src="pics/model2.png" alt="model" class="animate__animated animate__backInDown">
+                    <img src="/pics/model1.png" alt="model" class="animate__animated animate__backInDown">
+                    <img src="/pics/model2.png" alt="model" class="animate__animated animate__backInDown">
                 </div>
                 <p>Welcome to the home page.</p>
             </section>
@@ -88,33 +101,30 @@
                 <div class="distance-image-container">
 
                     <div class="image-item">
-                        <img src="pics/distance1.jpg" alt="distance1" class="animate__animated animate__backInDown">
+                        <img src="/pics/distance1.jpg" alt="distance1" class="animate__animated animate__backInDown">
                         <p>Price: 100$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/distance2.jpg" alt="distance2" class="animate__animated animate__backInDown">
+                        <img src="/pics/distance2.jpg" alt="distance2" class="animate__animated animate__backInDown">
                         <p>Price: 120$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/distance3.jpg" alt="distance3" class="animate__animated animate__backInDown">
+                        <img src="/pics/distance3.jpg" alt="distance3" class="animate__animated animate__backInDown">
                         <p>Price: 130$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/distance4.jpg" alt="distance4" class="animate__animated animate__backInDown">
+                        <img src="/pics/distance4.jpg" alt="distance4" class="animate__animated animate__backInDown">
                         <p>Price: 140$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/distance5.jpg" alt="distance5" class="animate__animated animate__backInDown">
+                        <img src="/pics/distance5.jpg" alt="distance5" class="animate__animated animate__backInDown">
                         <p>Price: 150$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/distance6.jpg" alt="distance6" class="animate__animated animate__backInDown">
+                        <img src="/pics/distance6.jpg" alt="distance6" class="animate__animated animate__backInDown">
                         <p>Price: 160$</p>
                     </div>
-
                 </div>
-                <p>Information about distance spikes.</p>
-                <br>
                 <br>
                 <br>
                 <br>
@@ -124,24 +134,22 @@
                 <h2>Sprint Spikes</h2>
                 <div class="sprint-image-container">
                     <div class="image-item">
-                        <img src="pics/maxfly1.jpg" alt="maxfly1" class="animate__animated animate__backInDown">
+                        <img src="/pics/maxfly1.jpg" alt="maxfly1" class="animate__animated animate__backInDown">
                         <p>Price: 100$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/maxfly2.jpg" alt="maxfly2" class="animate__animated animate__backInDown">
+                        <img src="/pics/maxfly2.jpg" alt="maxfly2" class="animate__animated animate__backInDown">
                         <p>Price: 120$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/prototype.jpg" alt="prototype" class="animate__animated animate__backInDown">
+                        <img src="/pics/prototype.jpg" alt="prototype" class="animate__animated animate__backInDown">
                         <p>Price: 130$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/zoomfly.png" alt="zoomfly" class="animate__animated animate__backInDown">
+                        <img src="/pics/zoomfly.png" alt="zoomfly" class="animate__animated animate__backInDown">
                         <p>Price: 140$</p>
                     </div>
                 </div>
-                <p>Information about sprint spikes.</p>
-                <br>
                 <br>
                 <br>
                 <br>
@@ -151,53 +159,187 @@
                 <h2>Allround Spikes</h2>
                 <div class="allround-image-container">
                     <div class="image-item">
-                        <img src="pics/allround1.jpg" alt="allround1" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround1.jpg" alt="allround1" class="animate__animated animate__backInDown">
                         <p>Price: 100$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround2.jpg" alt="allround2" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround2.jpg" alt="allround2" class="animate__animated animate__backInDown">
                         <p>Price: 120$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround3.jpg" alt="allround3" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround3.jpg" alt="allround3" class="animate__animated animate__backInDown">
                         <p>Price: 130$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround4.jpg" alt="allround4" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround4.jpg" alt="allround4" class="animate__animated animate__backInDown">
                         <p>Price: 140$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround5.jpg" alt="allround5" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround5.jpg" alt="allround5" class="animate__animated animate__backInDown">
                         <p>Price: 150$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround6.jpg" alt="allround6" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround6.jpg" alt="allround6" class="animate__animated animate__backInDown">
                         <p>Price: 160$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround7.jpg" alt="allround7" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround7.jpg" alt="allround7" class="animate__animated animate__backInDown">
                         <p>Price: 170$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround8.jpg" alt="allround8" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround8.jpg" alt="allround8" class="animate__animated animate__backInDown">
                         <p>Price: 180$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround9.jpg" alt="allround9" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround9.jpg" alt="allround9" class="animate__animated animate__backInDown">
                         <p>Price: 190$</p>
                     </div>
                     <div class="image-item">
-                        <img src="pics/allround10.jpg" alt="allround10" class="animate__animated animate__backInDown">
+                        <img src="/pics/allround10.jpg" alt="allround10" class="animate__animated animate__backInDown">
                         <p>Price: 200$</p>
                     </div>
                 </div>
-                <p>Information about allround spikes.</p>
-                <br>
                 <br>
                 <br>
                 <br>
             </section>
-        </div>
+            <section id="bestelformulier" class="tab-content" class="animate__backInDown">
+                <h2>bestelformulier</h2>
+                <div class="head">
+                    <div class="logo">
+                        <img src="/pics/logo.png" class="logoSvclg">
+                    </div>
+                </div>
+                <div class="container">
+                    <form>
+                        <table>
+                            <tr>
+                                <td colspan="2" class="title">JE GEGEVENS<span class="orange">.</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="subtitle">Wat moet er op het factuur staan?</td>
+                            </tr>
+                            <tr>
+                                <td class="name">Type bestelling</td>
+                                <td class="inputsCell">
+                                    <div class="inputs">
+                                        <label><input type="radio" name="order_type" checked><span class="checkmark"></span> Particulier</label>
+                                        <label><input type="radio" name="order_type"><span class="checkmark"></span> Zakelijk</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Aanhef</td>
+                                <td class="inputsCell">
+                                    <div class="inputs">
+                                        <label><input type="radio" name="salutation" checked><span class="checkmark"></span> Dhr.</label>
+                                        <label><input type="radio" name="salutation"><span class="checkmark"></span> Mevr.</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Naam</td>
+                                <td class="inputsCell">
+                                    <div class="inputs">
+                                        <input type="text" name="firstname" placeholder="Voornaam">
+                                        <input type="text" name="middlename" placeholder="Tussenv.">
+                                        <input type="text" name="lastname" placeholder="Achternaam">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Postcode</td>
+                                <td class="inputsCell">
+                                    <input type="text" name="postcode" placeholder="1234AB">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Huisnummer</td>
+                                <td class="inputsCell">
+                                    <div class="inputs">
+                                        <input type="text" name="housenumber" placeholder="Nr.">
+                                        <input type="text" name="housenumberadd" placeholder="Toev.">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name">Land</td>
+                                <td class="inputsCell">Nederland <a href="#"><i class="fa-solid fa-angle-right"></i> In België laten bezorgen</a></td>
+                            </tr>
+                            <tr>
+                                <td class="name">Afleveradres</td>
+                                <td class="inputsCell">
+                                    <div class="inputs">
+                                        <label><input type="radio" name="shipping" checked><span class="checkmark"></span> Op bovenstaand adres bezorgen</label>
+                                        <label><input type="radio" name="shipping"><span class="checkmark"></span> Op ander adres bezorgen</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>E-mailadres</td>
+                                <td class="inputsCell">
+                                    <input type="email" name="email">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Telefoonnummer</td>
+                                <td class="inputsCell">
+                                    <input type="tel" name="phone">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Geboortedatum</td>
+                                <td class="inputsCell">
+                                    <input type="text" name="dateOfBirth" placeholder="dd-mm-jjjj">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Verzendwijze factuur</td>
+                                <td class="inputsCell">
+                                    <div class="inputs">
+                                        <label><input type="radio" name="invoice" checked><span class="checkmark"></span> Factuur per e-mail</label>
+                                        <label><input type="radio" name="invoice"><span class="checkmark"></span> Factuur geprint bij de bestelling</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Nieuwsbrief</td>
+                                <td class="inputsCell">
+                                    <input type="checkbox" name="newsletter" checked>
+                                    <label>Ja, ik wil de nieuwsbrief met <span class="orange" style="font-weight: 700;">&euro;5,- cadeaubon</span> voor mijn volgende bestelling</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Kleur verpakking</td>
+                                <td class="inputsCell">
+                                    <input type="color" name="color">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="title">BEWAAR JE GEGEVENS<span class="orange">.</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="subtitle">Handig voor de volgende keer.</td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Wachtwoord</td>
+                                <td class="inputsCell">
+                                    <input type="password" name="password">
+                                    <p class="description">Minimaal 6 karakters.<br>Verder doen we niet zo moeilijk.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Wachtwoord bevestigen</td>
+                                <td class="inputsCell">
+                                    <input type="password" name="passwordConfirm">
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="subitBar">
+                            <button type="submit">Verder</button>
+                        </div>
+                    </form>
+                </div>
     </main>
     <footer>
         <p>Best quality Spikes here</p>

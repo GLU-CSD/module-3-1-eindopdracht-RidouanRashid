@@ -1,11 +1,12 @@
 /* website essentials */
 
 header {
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
     text-align: center;
     color: black;
-    display: flexbox;
+    display: flex; /* fixed the typo */
     justify-content: center;
+    align-items: center; /* added for vertical centering */
     padding: 1em;
 }
 
@@ -15,7 +16,7 @@ nav {
     padding: 1em;
     display: flex;
     justify-content: center;
-    padding: 1em;
+    align-items: center; /* added for vertical centering */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,17 +29,18 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 10px; 
+    margin: 0 10px;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    line-height: 1.6; /* improved readability */
 }
 
 main {
@@ -47,7 +49,7 @@ main {
 }
 
 footer {
-    background-color: white; 
+    background-color: white;
     color: black;
     text-align: center;
     padding: 10px;
@@ -58,20 +60,41 @@ footer {
 
 .search-bar {
     padding: 10px;
-    background-color: transparent; 
+    background-color: transparent;
     text-align: center;
     display: flex;
     justify-content: center;
-    padding: space-between;
     margin: 10px;
 }
 
-.search-bar input{
+.search-bar input {
     border-radius: 50px;
     padding: 0.7em;
     width: 40%;
     height: auto;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .search-bar input {
+        width: 80%; /* adjusted for smaller screens */
+    }
     
+    #side-bar {
+        width: 100%; /* make side-bar full width on small screens */
+    }
+
+    .content {
+        width: 100%; /* content takes full width on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* stack navigation items on mobile */
+    }
+
+    .image-item img {
+        width: 120px; /* smaller images on mobile */
+    }
 }
 
 .logo{
@@ -170,51 +193,264 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#section1 {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 10%;
-    width: auto;
-    height: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+/* sections */
 
-#section2 {
-    display: flex;
-    justify-content: space-around;
-    width: auto;
-    height: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#section3 {
+/* sections */
+#section1, #section2, #section3, #section4, #section5 {
     display: flex;
     justify-content: center;
-    width: auto;
-    height: 200px;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden; /* Removes scrollbars */
+}
+
+section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center; /* Aligns header text to center */
+    word-wrap: break-word; /* Ensures long words break and don't overflow */
+}
+
+section label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-align: center; /* Aligns label text to center */
+}
+
+section p {
+    text-align: center; /* Aligns paragraph content to the center */
+    margin-top: 10px;
+    font-size: 0.9rem; /* Makes text smaller to fit better inside the section */
+}
+
+/* Ensures images within sections are scaled down to fit */
+#section1 img, #section2 img, #section3 img, #section4 img, #section5 img {
+    max-width: 100%;
+    max-height: 100%; /* Ensures image does not exceed section height */
+    object-fit: contain; /* Ensures images maintain aspect ratio without overflowing */
+}
+
+/* If text or content is large, scale it down */
+section {
+    font-size: 0.9rem; /* Reduce the size of text within the section */
+    line-height: 1.2; /* Makes text more compact */
+}
+
+
+/* bestelformulier */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#section4 {
-    display: flex;
-    justify-content: space-evenly;
-    width: auto;
-    height: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.orange {
+    color: #f60;
 }
 
-#section5 {
+.container {
     display: flex;
-    justify-content: space-evenly;
-    width: auto;
-    height: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
 }
 
-#section6 {
+form {
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.title {
+    font-family: "AvenirBlack", Arial, Helvetica, Verdana, sans-serif;
+    color: #285dab;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.subtitle {
+    color: #0090e3;
+    font-weight: 400;
+    font-family: "DobraSlabBook", Georgia, "Times New Roman", Times, "Droid Serif", serif;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+tr {
+    height: 100%;
+}
+
+td {
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+.name {
     display: flex;
-    justify-content: space-evenly;
-    width: auto;
-    height: 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: flex-end;
+    width: 95%;
+    margin-top: 7.5px;
+    text-align: end;
+}
+
+.name button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #f0f0f0;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.name button i {
+    color: #fff;
+    font-size: 10px;
+}
+
+.inputsCell {
+    text-align: left;
+    width: 70%;
+}
+
+.inputsCell input {
+    height: 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.inputsCell input[type=color] {
+    padding: 2px;
+    height: 25px;
+    width: 220px;
+    margin-top: 5px;
+}
+
+.inputsCell input[type=radio] {
+    display: none;
+}
+
+.inputsCell input[name=middlename] {
+    width: 70px;
+}
+
+.inputsCell input[name=postcode] {
+    width: 100px;
+}
+
+.inputsCell input[name=housenumber],
+.inputsCell input[name=housenumberadd] {
+    width: 50px;
+}
+
+.inputsCell input[name=email] {
+    width: 300px;
+}
+
+.inputsCell input[name=newsletter] {
+    margin: 0;
+    width: 20px;
+    height: 12px;
+}
+
+.inputsCell input[type=date] {
+    color: #b0b0b0;
+}
+
+.inputsCell a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.inputsCell a i {
+    font-weight: 700;
+}
+
+.inputsCell label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputs {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+
+.inputs label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+}
+
+.checkmark {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+.inputs label:hover .checkmark {
+    background-color: #ddd;
+}
+
+.checkmark::after {
+    content: "";
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 50%;
+    background-color: #000;
+    display: none;
+}
+
+ .inputs input[type=radio]:checked+.checkmark::after {
+    display: block;
+}
+
+.description {
+    color: #727272;
+}
+
+.subitBar {
+    display: flex;
+    justify-content: end;
+    height: 45px;
+    border: 1.2px solid #ccc;
+    background-color: #e6e6e6;
+    margin-top: 20px;
+}
+
+.subitBar button {
+    background-color: #00b900;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin: 2.5px;
+    padding: 10px 30px;
+}
+.right .title {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.right .description {
+    margin: 0;
 }

@@ -29,3 +29,35 @@ function updateTextContent(elementId, text) {
 }
 
 document.documentElement.style.setProperty('--animate-duration', '2s');
+
+// Price Range
+const priceSlider = document.getElementById("price");
+const priceValue = document.getElementById("priceValue");
+
+priceSlider.addEventListener("input", function () {
+    priceValue.textContent = priceSlider.value;
+});
+
+// Size Range
+const sizeSlider = document.getElementById("size");
+const sizeValue = document.getElementById("sizeValue");
+
+sizeSlider.addEventListener("input", function () {
+    sizeValue.textContent = sizeSlider.value;
+});
+
+// Color Picker
+const colorPicker = document.getElementById("color");
+const colorValue = document.getElementById("colorValue");
+
+colorPicker.addEventListener("input", function () {
+    colorValue.textContent = colorPicker.value;
+});
+
+// Lace Selector
+const laceSelector = document.getElementById("laces");
+const lacesValue = document.getElementById("lacesValue");
+
+laceSelector.addEventListener("change", function () {
+    lacesValue.textContent = laceSelector.value;
+});
