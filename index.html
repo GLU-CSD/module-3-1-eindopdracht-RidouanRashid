@@ -1,32 +1,204 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <meta name="theme-color" content="#fafafa">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Spikes</title>
+    <link rel="stylesheet" href="/module-3-1-eindopdracht-RidouanRashid/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="javascript/functions.js"></script>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function (tab) {
+                tab.style.display = 'none';
+            });
+            document.getElementById(tabId).style.display = 'block';
+        }
+    </script>
 </head>
 
-<body>
+<body onload="showTab('Home')">
+    <header>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="assets/js/app.js"></script>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <br>
+        <h1>Spikes</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showTab('Home')">Home</a></li>
+                <li><a href="#" onclick="showTab('distanceSpikes')">Distance Spikes</a></li>
+                <li><a href="#" onclick="showTab('SprintSpikes')">Sprint Spikes</a></li>
+                <li><a href="#" onclick="showTab('allRoundSpikes')">Allround Spikes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside id="side-bar">
+            <div id="slider">
+                <section id="section1">
+                    <h2>Section 1</h2> <br>
+                    <p>Content for section 1</p>
+                </section>
+            </div>
+            <section>
+                <div id="section2">
+                    alalalal222
+                </div>
+            </section>
+            <section>
+                <div id="section3">
+                    alalalal333
+                </div>
+            </section>
+            <section>
+                <div id="section4">
+                    alalalal444
+                </div>
+            </section>
+            <section>
+                <div id="section5">
+                    alalalal555
+                </div>
+            </section>
+            <section>
+                <div id="section6">
+                    alalalal666
+                </div>
+            </section>
+        </aside>
+        <div class="content">
+            <section id="Home" class="tab-content">
+                <h2>Home</h2>
+                <div class="model-img">
+                    <img src="pics/model1.png" alt="model" class="animate__animated animate__backInDown">
+                    <img src="pics/model2.png" alt="model" class="animate__animated animate__backInDown">
+                </div>
+                <p>Welcome to the home page.</p>
+            </section>
 
+            <section id="distanceSpikes" class="tab-content animate__animated animate__backInDown">
+                <h2>Distance Spikes</h2>
+                <div class="distance-image-container">
+
+                    <div class="image-item">
+                        <img src="pics/distance1.jpg" alt="distance1" class="animate__animated animate__backInDown">
+                        <p>Price: 100$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/distance2.jpg" alt="distance2" class="animate__animated animate__backInDown">
+                        <p>Price: 120$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/distance3.jpg" alt="distance3" class="animate__animated animate__backInDown">
+                        <p>Price: 130$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/distance4.jpg" alt="distance4" class="animate__animated animate__backInDown">
+                        <p>Price: 140$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/distance5.jpg" alt="distance5" class="animate__animated animate__backInDown">
+                        <p>Price: 150$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/distance6.jpg" alt="distance6" class="animate__animated animate__backInDown">
+                        <p>Price: 160$</p>
+                    </div>
+
+                </div>
+                <p>Information about distance spikes.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+            </section>
+
+            <section id="SprintSpikes" class="tab-content animate__animated animate__backInDown">
+                <h2>Sprint Spikes</h2>
+                <div class="sprint-image-container">
+                    <div class="image-item">
+                        <img src="pics/maxfly1.jpg" alt="maxfly1" class="animate__animated animate__backInDown">
+                        <p>Price: 100$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/maxfly2.jpg" alt="maxfly2" class="animate__animated animate__backInDown">
+                        <p>Price: 120$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/prototype.jpg" alt="prototype" class="animate__animated animate__backInDown">
+                        <p>Price: 130$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/zoomfly.png" alt="zoomfly" class="animate__animated animate__backInDown">
+                        <p>Price: 140$</p>
+                    </div>
+                </div>
+                <p>Information about sprint spikes.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+            </section>
+
+            <section id="allRoundSpikes" class="tab-content animate__animated animate__backInDown">
+                <h2>Allround Spikes</h2>
+                <div class="allround-image-container">
+                    <div class="image-item">
+                        <img src="pics/allround1.jpg" alt="allround1" class="animate__animated animate__backInDown">
+                        <p>Price: 100$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround2.jpg" alt="allround2" class="animate__animated animate__backInDown">
+                        <p>Price: 120$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround3.jpg" alt="allround3" class="animate__animated animate__backInDown">
+                        <p>Price: 130$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround4.jpg" alt="allround4" class="animate__animated animate__backInDown">
+                        <p>Price: 140$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround5.jpg" alt="allround5" class="animate__animated animate__backInDown">
+                        <p>Price: 150$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround6.jpg" alt="allround6" class="animate__animated animate__backInDown">
+                        <p>Price: 160$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround7.jpg" alt="allround7" class="animate__animated animate__backInDown">
+                        <p>Price: 170$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround8.jpg" alt="allround8" class="animate__animated animate__backInDown">
+                        <p>Price: 180$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround9.jpg" alt="allround9" class="animate__animated animate__backInDown">
+                        <p>Price: 190$</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="pics/allround10.jpg" alt="allround10" class="animate__animated animate__backInDown">
+                        <p>Price: 200$</p>
+                    </div>
+                </div>
+                <p>Information about allround spikes.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Best quality Spikes here</p>
+    </footer>
 </body>
 
 </html>
