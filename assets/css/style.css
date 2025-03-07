@@ -4,9 +4,9 @@ header {
     background-color: whitesmoke;
     text-align: center;
     color: black;
-    display: flex; /* fixed the typo */
+    display: flex; 
     justify-content: center;
-    align-items: center; /* added for vertical centering */
+    align-items: center;
     padding: 1em;
 }
 
@@ -16,7 +16,7 @@ nav {
     padding: 1em;
     display: flex;
     justify-content: center;
-    align-items: center; /* added for vertical centering */
+    align-items: center; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -40,7 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    line-height: 1.6; /* improved readability */
+    line-height: 1.6; 
 }
 
 main {
@@ -74,26 +74,26 @@ footer {
     height: auto;
 }
 
-/* Media Queries for responsiveness */
+
 @media screen and (max-width: 768px) {
     .search-bar input {
-        width: 80%; /* adjusted for smaller screens */
+        width: 80%; 
     }
     
     #side-bar {
-        width: 100%; /* make side-bar full width on small screens */
+        width: 100%; 
     }
 
     .content {
-        width: 100%; /* content takes full width on smaller screens */
+        width: 100%; 
     }
 
     nav ul {
-        flex-direction: column; /* stack navigation items on mobile */
+        flex-direction: column; 
     }
 
     .image-item img {
-        width: 120px; /* smaller images on mobile */
+        width: 120px; 
     }
 }
 
@@ -122,6 +122,20 @@ footer {
 }
 
 /* producten */
+
+.home-information {
+    font-weight: 500;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFFFFF; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .allround-image-container, .distance-image-container, .sprint-image-container {
     display: flex;
@@ -162,7 +176,7 @@ footer {
 }
 
 #distance1, #distance2 {
-    animation: animate__backInDown 1s;
+    animation: animate__backInDown 0.5s;
 }
 
 #side-bar {
@@ -179,13 +193,14 @@ footer {
     box-sizing: border-box;
     background-color: #FFFFFF; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .model-img {
-    width: 40%;
+    width: 80%;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #F5F5F5;
     border-radius: 8px;
     padding: 1rem;
@@ -195,8 +210,7 @@ footer {
 
 /* sections */
 
-/* sections */
-#section1, #section2, #section3, #section4, #section5 {
+.sectionn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,42 +218,22 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     box-sizing: border-box;
-    overflow: hidden; /* Removes scrollbars */
+    overflow: hidden; 
 }
 
 section h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    text-align: center; /* Aligns header text to center */
-    word-wrap: break-word; /* Ensures long words break and don't overflow */
+    text-align: center; 
+    word-wrap: break-word; 
 }
 
 section label {
     font-size: 1rem;
     margin-bottom: 5px;
     display: inline-block;
-    text-align: center; /* Aligns label text to center */
+    text-align: center;
 }
-
-section p {
-    text-align: center; /* Aligns paragraph content to the center */
-    margin-top: 10px;
-    font-size: 0.9rem; /* Makes text smaller to fit better inside the section */
-}
-
-/* Ensures images within sections are scaled down to fit */
-#section1 img, #section2 img, #section3 img, #section4 img, #section5 img {
-    max-width: 100%;
-    max-height: 100%; /* Ensures image does not exceed section height */
-    object-fit: contain; /* Ensures images maintain aspect ratio without overflowing */
-}
-
-/* If text or content is large, scale it down */
-section {
-    font-size: 0.9rem; /* Reduce the size of text within the section */
-    line-height: 1.2; /* Makes text more compact */
-}
-
 
 /* bestelformulier */
 

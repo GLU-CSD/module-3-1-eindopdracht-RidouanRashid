@@ -8,15 +8,6 @@
     <link rel="stylesheet" href="/module-3-1-eindopdracht-RidouanRashid/assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="/module-3-1-eindopdracht-RidouanRashid/assets/js/functions.js"></script>
-    <script>
-        function showTab(tabId) {
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function (tab) {
-                tab.style.display = 'none';
-            });
-            document.getElementById(tabId).style.display = 'block';
-        }
-    </script>
 </head>
 
 <body onload="showTab('Home')">
@@ -29,42 +20,45 @@
         </div>
         <br>
         <h1>Spikes</h1>
-        <nav>
-            <ul>
-                <li><a href="#" onclick="showTab('Home')">Home</a></li>
-                <li><a href="#" onclick="showTab('distanceSpikes')">Distance Spikes</a></li>
-                <li><a href="#" onclick="showTab('SprintSpikes')">Sprint Spikes</a></li>
-                <li><a href="#" onclick="showTab('allRoundSpikes')">Allround Spikes</a></li>
-                <li><a href="#" onclick="showTab('bestelformulier')">bestelformulier</a></li>
-            </ul>
-        </nav>
-        
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showTab('Home')">Home</a></li>
+                    <li><a href="#" onclick="showTab('distanceSpikes')">Distance Spikes</a></li>
+                    <li><a href="#" onclick="showTab('SprintSpikes')">Sprint Spikes</a></li>
+                    <li><a href="#" onclick="showTab('allRoundSpikes')">Allround Spikes</a></li>
+                    <li><a href="#" onclick="showTab('bestelformulier')">bestelformulier</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
     <main>
         <aside id="side-bar">
             <div id="slider">
-                <section id="section1">
-                    
+                <section class="sectionn">
+
                     <label for="price">Select Price:</label>
                     <input type="range" id="price" name="price" min="100" max="500" step="10" value="100">
                     <p>Price: $<span id="priceValue">100</span></p>
-                </section>
-                
-                <section id="section2">
                     
+                </section>
+
+                <section class="sectionn">
+
                     <label for="size">Select Size:</label>
                     <input type="range" id="size" name="size" min="1" max="10" step="1" value="1">
                     <p>Size: <span id="sizeValue">1</span></p>
                 </section>
-                
-                <section id="section3">
+
+                <section class="sectionn">
                     <h3>Color</h3>
                     <label for="color">Choose Color:</label>
                     <input type="color" id="color" name="color" value="#ff0000">
                     <p>Color: <span id="colorValue"></span></p>
                 </section>
-                
-                <section id="section4">
+
+                <section class="sectionn">
                     <h3>Shoe Laces</h3>
                     <label for="laces">Select Laces:</label>
                     <select id="laces" name="laces">
@@ -75,16 +69,12 @@
                     </select>
                     <p>Laces: <span id="lacesValue">Black</span></p>
                 </section>
-                
-                <section id="section5">
-                    <h3>Stock</h3> 
-                    
-                    
+
+                <section class="sectionn">
+                    <h3>Stock</h3>
                     <p>Stock left: <span id="stockLeft">50</span> pairs</p>
                 </section>
-                
-                
-            </div>                
+            </div>
         </aside>
         <div class="content">
             <section id="Home" class="tab-content">
@@ -93,35 +83,70 @@
                     <img src="/pics/model1.png" alt="model" class="animate__animated animate__backInDown">
                     <img src="/pics/model2.png" alt="model" class="animate__animated animate__backInDown">
                 </div>
-                <p>Welcome to the home page.</p>
+                <div class=".home-information">
+                    <p>Welcome to the home page.</p>
+                    <p>Spikes, in the context of footwear, have a fascinating history that traces back to ancient
+                        civilizations. The earliest form of spiked footwear can be seen in the sandals worn by the
+                        Greeks and Romans, which featured metal spikes or nails embedded in the soles for better
+                        traction during athletic competitions or combat. However, it was during the late 19th century
+                        that the modern concept of "spikes" began to take shape in athletics.</p>
+
+                    <p>The real innovation came in the 1860s when a British inventor named Joseph William Foster, who
+                        later founded the company J.W. Foster & Sons (which eventually became Reebok), created the first
+                        pair of track shoes with spikes. These shoes featured small metal spikes affixed to the sole to
+                        give athletes better grip during running events, especially in track and field. His invention
+                        revolutionized competitive sports, particularly in running, by improving performance and
+                        reducing slipping.</p>
+
+                    <p>As the 20th century progressed, spikes became an essential part of many sports, including
+                        football, soccer, and track and field. Manufacturers started experimenting with different
+                        materials for spikes, including rubber, aluminum, and steel, to balance performance, durability,
+                        and comfort. The designs also evolved, with more sophisticated and sport-specific models being
+                        created, such as spikes for cross-country running, sprints, and long-distance races.</p>
+
+                    <p>Today, spikes are crucial in various sports, with specialized shoes tailored for different
+                        surfaces and activities, demonstrating how a simple innovation has significantly impacted
+                        athletic performance and footwear technology.</p>
+
+                        
+                </div>
+                <br>
+                <br>
+                <br>
             </section>
 
             <section id="distanceSpikes" class="tab-content animate__animated animate__backInDown">
                 <h2>Distance Spikes</h2>
                 <div class="distance-image-container">
-
                     <div class="image-item">
                         <img src="/pics/distance1.jpg" alt="distance1" class="animate__animated animate__backInDown">
+                        <p>victory 1</p>
                         <p>Price: 100$</p>
+
                     </div>
                     <div class="image-item">
                         <img src="/pics/distance2.jpg" alt="distance2" class="animate__animated animate__backInDown">
+                        <p>victory 2</p>
                         <p>Price: 120$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/distance3.jpg" alt="distance3" class="animate__animated animate__backInDown">
+                        <p>dragonfly 1</p>
                         <p>Price: 130$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/distance4.jpg" alt="distance4" class="animate__animated animate__backInDown">
+                        <p>dragonfly 2</p>
                         <p>Price: 140$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/distance5.jpg" alt="distance5" class="animate__animated animate__backInDown">
+                        <p>zoomfly 1</p>
                         <p>Price: 150$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/distance6.jpg" alt="distance6" class="animate__animated animate__backInDown">
+                        <p>zoomfly 2</p>
                         <p>Price: 160$</p>
                     </div>
                 </div>
@@ -135,18 +160,22 @@
                 <div class="sprint-image-container">
                     <div class="image-item">
                         <img src="/pics/maxfly1.jpg" alt="maxfly1" class="animate__animated animate__backInDown">
+                        <p>maxfly 1</p>
                         <p>Price: 100$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/maxfly2.jpg" alt="maxfly2" class="animate__animated animate__backInDown">
+                        <p>maxfly 2</p>
                         <p>Price: 120$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/prototype.jpg" alt="prototype" class="animate__animated animate__backInDown">
+                        <p>maxfly prototype</p>
                         <p>Price: 130$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/zoomfly.png" alt="zoomfly" class="animate__animated animate__backInDown">
+                        <p>maxfly elite</p>
                         <p>Price: 140$</p>
                     </div>
                 </div>
@@ -160,42 +189,52 @@
                 <div class="allround-image-container">
                     <div class="image-item">
                         <img src="/pics/allround1.jpg" alt="allround1" class="animate__animated animate__backInDown">
+                        <p>allround 1</p>
                         <p>Price: 100$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround2.jpg" alt="allround2" class="animate__animated animate__backInDown">
+                        <p>allround 2</p>
                         <p>Price: 120$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround3.jpg" alt="allround3" class="animate__animated animate__backInDown">
+                        <p>allround 3</p>
                         <p>Price: 130$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround4.jpg" alt="allround4" class="animate__animated animate__backInDown">
+                        <p>allround 4</p>
                         <p>Price: 140$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround5.jpg" alt="allround5" class="animate__animated animate__backInDown">
+                        <p>allround 5</p>
                         <p>Price: 150$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround6.jpg" alt="allround6" class="animate__animated animate__backInDown">
+                        <p>allround 6</p>
                         <p>Price: 160$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround7.jpg" alt="allround7" class="animate__animated animate__backInDown">
+                        <p>allround 7</p>
                         <p>Price: 170$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround8.jpg" alt="allround8" class="animate__animated animate__backInDown">
+                        <p>allround 8</p>
                         <p>Price: 180$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround9.jpg" alt="allround9" class="animate__animated animate__backInDown">
+                        <p>allround 9</p>
                         <p>Price: 190$</p>
                     </div>
                     <div class="image-item">
                         <img src="/pics/allround10.jpg" alt="allround10" class="animate__animated animate__backInDown">
+                        <p>allround 10</p>
                         <p>Price: 200$</p>
                     </div>
                 </div>
@@ -203,7 +242,7 @@
                 <br>
                 <br>
             </section>
-            <section id="bestelformulier" class="tab-content" class="animate__backInDown">
+            <section id="bestelformulier" class="tab-content">
                 <h2>bestelformulier</h2>
                 <div class="head">
                     <div class="logo">
@@ -223,8 +262,10 @@
                                 <td class="name">Type bestelling</td>
                                 <td class="inputsCell">
                                     <div class="inputs">
-                                        <label><input type="radio" name="order_type" checked><span class="checkmark"></span> Particulier</label>
-                                        <label><input type="radio" name="order_type"><span class="checkmark"></span> Zakelijk</label>
+                                        <label><input type="radio" name="order_type" checked><span
+                                                class="checkmark"></span> Particulier</label>
+                                        <label><input type="radio" name="order_type"><span class="checkmark"></span>
+                                            Zakelijk</label>
                                     </div>
                                 </td>
                             </tr>
@@ -232,8 +273,10 @@
                                 <td class="name">Aanhef</td>
                                 <td class="inputsCell">
                                     <div class="inputs">
-                                        <label><input type="radio" name="salutation" checked><span class="checkmark"></span> Dhr.</label>
-                                        <label><input type="radio" name="salutation"><span class="checkmark"></span> Mevr.</label>
+                                        <label><input type="radio" name="salutation" checked><span
+                                                class="checkmark"></span> Dhr.</label>
+                                        <label><input type="radio" name="salutation"><span class="checkmark"></span>
+                                            Mevr.</label>
                                     </div>
                                 </td>
                             </tr>
@@ -264,53 +307,66 @@
                             </tr>
                             <tr>
                                 <td class="name">Land</td>
-                                <td class="inputsCell">Nederland <a href="#"><i class="fa-solid fa-angle-right"></i> In België laten bezorgen</a></td>
+                                <td class="inputsCell">Nederland <a href="#"><i class="fa-solid fa-angle-right"></i> In
+                                        België laten bezorgen</a></td>
                             </tr>
                             <tr>
                                 <td class="name">Afleveradres</td>
                                 <td class="inputsCell">
                                     <div class="inputs">
-                                        <label><input type="radio" name="shipping" checked><span class="checkmark"></span> Op bovenstaand adres bezorgen</label>
-                                        <label><input type="radio" name="shipping"><span class="checkmark"></span> Op ander adres bezorgen</label>
+                                        <label><input type="radio" name="shipping" checked><span
+                                                class="checkmark"></span> Op bovenstaand adres bezorgen</label>
+                                        <label><input type="radio" name="shipping"><span class="checkmark"></span> Op
+                                            ander adres bezorgen</label>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>E-mailadres</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>E-mailadres</td>
                                 <td class="inputsCell">
                                     <input type="email" name="email">
                                 </td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Telefoonnummer</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>Telefoonnummer</td>
                                 <td class="inputsCell">
                                     <input type="tel" name="phone">
                                 </td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Geboortedatum</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>Geboortedatum</td>
                                 <td class="inputsCell">
                                     <input type="text" name="dateOfBirth" placeholder="dd-mm-jjjj">
                                 </td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Verzendwijze factuur</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>Verzendwijze factuur</td>
                                 <td class="inputsCell">
                                     <div class="inputs">
-                                        <label><input type="radio" name="invoice" checked><span class="checkmark"></span> Factuur per e-mail</label>
-                                        <label><input type="radio" name="invoice"><span class="checkmark"></span> Factuur geprint bij de bestelling</label>
+                                        <label><input type="radio" name="invoice" checked><span
+                                                class="checkmark"></span> Factuur per e-mail</label>
+                                        <label><input type="radio" name="invoice"><span class="checkmark"></span>
+                                            Factuur geprint bij de bestelling</label>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Nieuwsbrief</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>Nieuwsbrief</td>
                                 <td class="inputsCell">
                                     <input type="checkbox" name="newsletter" checked>
-                                    <label>Ja, ik wil de nieuwsbrief met <span class="orange" style="font-weight: 700;">&euro;5,- cadeaubon</span> voor mijn volgende bestelling</label>
+                                    <label>Ja, ik wil de nieuwsbrief met <span class="orange"
+                                            style="font-weight: 700;">&euro;5,- cadeaubon</span> voor mijn volgende
+                                        bestelling</label>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Kleur verpakking</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>Kleur verpakking</td>
                                 <td class="inputsCell">
                                     <input type="color" name="color">
                                 </td>
@@ -322,14 +378,16 @@
                                 <td colspan="2" class="subtitle">Handig voor de volgende keer.</td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Wachtwoord</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>Wachtwoord</td>
                                 <td class="inputsCell">
                                     <input type="password" name="password">
                                     <p class="description">Minimaal 6 karakters.<br>Verder doen we niet zo moeilijk.</p>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="name"><button class="question"><i class="fa-solid fa-question"></i></button>Wachtwoord bevestigen</td>
+                                <td class="name"><button class="question"><i
+                                            class="fa-solid fa-question"></i></button>Wachtwoord bevestigen</td>
                                 <td class="inputsCell">
                                     <input type="password" name="passwordConfirm">
                                 </td>

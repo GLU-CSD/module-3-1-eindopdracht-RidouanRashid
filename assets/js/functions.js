@@ -1,5 +1,12 @@
-
-    function toggleVisibility(elementId) {
+function showTab(tabId) {
+    var tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(function (tab) {
+        tab.style.display = 'none';
+    });
+    document.getElementById(tabId).style.display = 'block';
+}
+ 
+ function toggleVisibility(elementId) {
     const element = document.getElementById(elementId);
     if (element.style.display === 'none') {
         element.style.display = 'block';
